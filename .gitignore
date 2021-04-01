@@ -3,6 +3,3 @@ node_modules/*
 package-lock.json
 log/*
 .DS_Store
-uploads
-.env
-config/awsconfig.json

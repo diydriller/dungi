@@ -693,6 +693,8 @@ exports.getDetailCalendar=async(req,res)=>{
 
         for(let _ of calendar){
             _.time=moment(_.time).format('YYYY/MM/DD/HH/mm');
+            _.isOwner=(_.userId===userId?'Y':'N');
+            delete _.userId;
         }
         
         return res.json({

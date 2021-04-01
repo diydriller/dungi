@@ -62,7 +62,7 @@ exports.selectCalendarByDate1=(roomId,year,month,day)=>{
 
 exports.selectCalendarByDetailDate=(roomId,year,month,day,page)=>{
   const query= `
-    SELECT category,time,categoryIdx,title,content,id AS calendarId
+    SELECT category,time,categoryIdx,title,content,id AS calendarId,userId
     FROM Calendar
     WHERE roomId=? AND YEAR(time)=? AND MONTH(time)=? AND DAY(time)=?
     ORDER BY Calendar.id
